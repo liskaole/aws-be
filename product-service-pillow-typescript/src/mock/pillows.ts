@@ -8,7 +8,7 @@ export const PILLOW: Pillow[] = [
         "filler": "Down",
         "height": 40, 
         "width": 40,
-        "price": "100 eur"
+        "price": 100
     },
     {
         "id": "2",
@@ -17,7 +17,7 @@ export const PILLOW: Pillow[] = [
         "filler": "Polyester Fiberfill",
         "height": 50, 
         "width": 50,
-        "price": "50 eur"
+        "price": 50
     },
     {
         "id": "3",
@@ -26,7 +26,7 @@ export const PILLOW: Pillow[] = [
         "filler": "Feather Pillow",
         "height": 50, 
         "width": 70,
-        "price": "350 eur"
+        "price": 350
     },
     {
         "id": "4",
@@ -35,7 +35,7 @@ export const PILLOW: Pillow[] = [
         "filler": "Memory Foam",
         "height": 50, 
         "width": 70,
-        "price": "250 eur"
+        "price": 250
     },
     {
         "id": "5",
@@ -44,7 +44,7 @@ export const PILLOW: Pillow[] = [
         "filler": "Buckwheat Hull",
         "height": 70, 
         "width": 70,
-        "price": "450 eur"
+        "price": 450
     },
     {
         "id": "6",
@@ -53,7 +53,7 @@ export const PILLOW: Pillow[] = [
         "filler": "Kapok",
         "height": 70, 
         "width": 70,
-        "price": "300 eur"
+        "price": 300
     },
     {
         "id": "7",
@@ -62,7 +62,7 @@ export const PILLOW: Pillow[] = [
         "filler": "Wool",
         "height": 60, 
         "width": 40,
-        "price": "500 eur"
+        "price": 500
     },
     {
         "id": "8",
@@ -71,7 +71,7 @@ export const PILLOW: Pillow[] = [
         "filler": "Latex",
         "height": 50, 
         "width": 70,
-        "price": "370 eur"
+        "price": 370
     },
     {
         "id": "9",
@@ -80,6 +80,6 @@ export const PILLOW: Pillow[] = [
         "filler": "Microbead",
         "height": 50, 
         "width": 70,
-        "price": "210 eur"
+        "price": 210
     }
 ]

@@ -5,5 +5,5 @@ export interface Pillow {
     filler: string
     height: number
     width: number
-    price: string
+    price: number
 }

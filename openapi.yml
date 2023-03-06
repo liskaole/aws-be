@@ -28,14 +28,16 @@ paths:
                 example1:
                   value:
                     - id: "1",
-                      pillowName: "pillow 1",
+                      title: "Pillow 1",
+                      description: "Pillow 1 description",
                       matherials: "Coton",
                       filler: "Polyester Fiberfill",
                       height: 50, 
                       width: 70,
                       price: 57
                     - id: "2",
-                      pillowName: "pillow 2",
+                      title: "pillow 2",
+                      description: "Pillow 2 description",
                       matherials: "Synthetic fibers",
                       filler: "Polyester Fiberfill",
                       height: 50, 
@@ -75,7 +77,8 @@ paths:
                 example1:
                   value:
                     id: "1",
-                    pillowName: "pillow 1",
+                    title: "Pillow 1",
+                    description: "Pillow 1 description",
                     matherials: "Coton",
                     filler: "Polyester Fiberfill",
                     height: 50, 
@@ -114,14 +117,18 @@ components:
     Product:
       type: object
       properties:
-        pillowName:
-          type: string
-          description: The title of the pillow.
-          example: 'Pillow 1'
         id:
           type: string
           description: The unique identifier of the pillow.
           example: '1'
+        title:
+          type: string
+          description: The title of the pillow.
+          example: 'Pillow 1'
+        description:
+          type: string
+          description: The description of the pillow.
+          example: 'Pillow 1 description'  
         matherials:
           type: string
           description: The top matherials of the pillow.
@@ -152,7 +159,7 @@ components:
           example: 10
       required:
         - id,
-        - pillowName,
+        - title,
         - matherials,
         - filler,
         - height, 

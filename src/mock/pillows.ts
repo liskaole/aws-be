@@ -1,9 +1,9 @@
-import { Pillow } from "src/model/pillow";
+import { Pillow } from "src/model/Pillow";
 
 export const PILLOW: Pillow[] = [
     {
         "id": "1",
-        "pillowName": "pillow 1",
+        "title": "pillow 1",
         "matherials": "Cotton",
         "filler": "Down",
         "height": 40, 
@@ -12,7 +12,7 @@ export const PILLOW: Pillow[] = [
     },
     {
         "id": "2",
-        "pillowName": "pillow 2",
+        "title": "pillow 2",
         "matherials": "Synthetic fibers",
         "filler": "Polyester Fiberfill",
         "height": 50, 
@@ -21,7 +21,7 @@ export const PILLOW: Pillow[] = [
     },
     {
         "id": "3",
-        "pillowName": "pillow 3",
+        "title": "pillow 3",
         "matherials": "Velvet",
         "filler": "Feather Pillow",
         "height": 50, 
@@ -30,7 +30,7 @@ export const PILLOW: Pillow[] = [
     },
     {
         "id": "4",
-        "pillowName": "pillow 4",
+        "title": "pillow 4",
         "matherials": "Synthetic fibers",
         "filler": "Memory Foam",
         "height": 50, 
@@ -39,7 +39,7 @@ export const PILLOW: Pillow[] = [
     },
     {
         "id": "5",
-        "pillowName": "pillow 5",
+        "title": "pillow 5",
         "matherials": "Synthetic fibers",
         "filler": "Buckwheat Hull",
         "height": 70, 
@@ -48,7 +48,7 @@ export const PILLOW: Pillow[] = [
     },
     {
         "id": "6",
-        "pillowName": "pillow 6",
+        "title": "pillow 6",
         "matherials": "Cotton",
         "filler": "Kapok",
         "height": 70, 
@@ -57,7 +57,7 @@ export const PILLOW: Pillow[] = [
     },
     {
         "id": "7",
-        "pillowName": "pillow 7",
+        "title": "pillow 7",
         "matherials": "Cotton",
         "filler": "Wool",
         "height": 60, 
@@ -66,7 +66,7 @@ export const PILLOW: Pillow[] = [
     },
     {
         "id": "8",
-        "pillowName": "pillow 8",
+        "title": "pillow 8",
         "matherials": "Synthetic fibers",
         "filler": "Latex",
         "height": 50, 
@@ -75,7 +75,7 @@ export const PILLOW: Pillow[] = [
     },
     {
         "id": "9",
-        "pillowName": "pillow 9",
+        "title": "pillow 9",
         "matherials": "Synthetic fibers",
         "filler": "Microbead",
         "height": 50, 

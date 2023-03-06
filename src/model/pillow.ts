@@ -1,6 +1,7 @@
 export interface Pillow {
     id: string
-    pillowName: string
+    title: string
+    description?: string
     matherials: string
     filler: string
     height: number

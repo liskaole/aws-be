@@ -1,13 +1,13 @@
 import { formatJSONResponse, formatJSONResponseError } from '@libs/api-gateway';
-import { PILLOW } from '../../mock/pillows';
+import pillowServerice from 'src/service';
 
 export const getProductsList = async () => {
   try {
-    return await new Promise(resolve =>
-      setTimeout(() => resolve(formatJSONResponse(PILLOW)), 300),
-    );
+    const pillows = await pillowServerice.getAllPillows();
+    return formatJSONResponse(pillows)
   } catch (e) {
     return formatJSONResponseError({
+      status: 500,
       message: e.message,
     });
   }

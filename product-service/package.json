@@ -1,7 +1,7 @@
 {
   "name": "product-service-pillow-typescript",
   "version": "1.0.0",
-  "description": "Serverless aws-nodejs-typescript template",
+  "description": "Product Service",
   "main": "serverless.ts",
   "scripts": {
     "test": "jest",

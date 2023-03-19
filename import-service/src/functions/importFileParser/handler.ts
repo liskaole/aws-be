@@ -47,7 +47,6 @@ const copyS3Object = async (client: S3Client, params) => {
         const input = new CopyObjectCommand(params)
         const response = await client.send(input)
 
-        deleteS3Object(client, params)
         console.log(`File ${params.key} was copied`, response);
     } catch (e) {
         console.log('Error of coping file', e)
@@ -85,18 +84,18 @@ export const importFileParser = (event) => {
     event.Records.map(async (record) => {
         const [sourceFolder, fileName] = record.s3.object.key.split("/")
 
-        uploadAsStream(client, {
+        await uploadAsStream(client, {
             Bucket: BUCKET,
             Key: record.s3.object.key,
         })
 
-        copyS3Object(client, {
+        await copyS3Object(client, {
             Bucket: BUCKET,
             CopySource: `${BUCKET}/${sourceFolder}/${fileName}`,
             Key: `parsed/${fileName}`,
         })
 
-        deleteS3Object(client, {
+        await deleteS3Object(client, {
             Bucket: BUCKET,
             Key: record.s3.object.key,
         })

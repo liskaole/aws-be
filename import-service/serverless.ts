@@ -2,8 +2,10 @@ import importFileParser from '@functions/importFileParser';
 import importProductsFile from '@functions/importProductsFile';
 import type { AWS } from '@serverless/typescript';
 
+const BUCKET = 'pillow-import-service'
+
 const serverlessConfiguration: AWS = {
-  service: 'pillow-import-service',
+  service: BUCKET,
   frameworkVersion: '3',
   plugins: ['serverless-esbuild', 'serverless-webpack', 'serverless-offline'],
   provider: {
@@ -18,18 +20,18 @@ const serverlessConfiguration: AWS = {
       role: {
         statements: [
           {
-            Effect: 'Allow',
+            Effect: "Allow",
             Action: [
               "s3:ListBucket"
             ],
-            Resource: "arn:aws:s3:::pillow-import-service"
+            Resource: `arn:aws:s3:::${BUCKET}`,
           },
           {
-            Effect: 'Allow',
+            Effect: "Allow",
             Action: [
               "s3:*"
             ],
-            Resource: "arn:aws:s3:::pillow-import-service/*"
+            Resource: `arn:aws:s3:::${BUCKET}/*`,
           }
         ]
       }

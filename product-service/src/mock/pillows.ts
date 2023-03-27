@@ -1,4 +1,4 @@
-import { Pillow } from "src/model/Pillow";
+import { Pillow } from "../model/pillow";
 
 export const PILLOW: Pillow[] = [
     {
@@ -8,7 +8,8 @@ export const PILLOW: Pillow[] = [
         "filler": "Down",
         "height": 40, 
         "width": 40,
-        "price": 100
+        "price": 100,
+        "count": 12
     },
     {
         "id": "2",
@@ -17,7 +18,8 @@ export const PILLOW: Pillow[] = [
         "filler": "Polyester Fiberfill",
         "height": 50, 
         "width": 50,
-        "price": 50
+        "price": 50,
+        "count": 12
     },
     {
         "id": "3",
@@ -26,7 +28,8 @@ export const PILLOW: Pillow[] = [
         "filler": "Feather Pillow",
         "height": 50, 
         "width": 70,
-        "price": 350
+        "price": 350,
+        "count": 12
     },
     {
         "id": "4",
@@ -35,7 +38,8 @@ export const PILLOW: Pillow[] = [
         "filler": "Memory Foam",
         "height": 50, 
         "width": 70,
-        "price": 250
+        "price": 250,
+        "count": 12
     },
     {
         "id": "5",
@@ -44,7 +48,8 @@ export const PILLOW: Pillow[] = [
         "filler": "Buckwheat Hull",
         "height": 70, 
         "width": 70,
-        "price": 450
+        "price": 450,
+        "count": 12
     },
     {
         "id": "6",
@@ -53,7 +58,8 @@ export const PILLOW: Pillow[] = [
         "filler": "Kapok",
         "height": 70, 
         "width": 70,
-        "price": 300
+        "price": 300,
+        "count": 12
     },
     {
         "id": "7",
@@ -62,7 +68,8 @@ export const PILLOW: Pillow[] = [
         "filler": "Wool",
         "height": 60, 
         "width": 40,
-        "price": 500
+        "price": 500,
+        "count": 17
     },
     {
         "id": "8",
@@ -71,7 +78,8 @@ export const PILLOW: Pillow[] = [
         "filler": "Latex",
         "height": 50, 
         "width": 70,
-        "price": 370
+        "price": 370,
+        "count": 17
     },
     {
         "id": "9",
@@ -80,6 +88,7 @@ export const PILLOW: Pillow[] = [
         "filler": "Microbead",
         "height": 50, 
         "width": 70,
-        "price": 210
+        "price": 210,
+        "count": 17
     }
 ]

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.289.0",
+    "@aws-sdk/client-sqs": "^3.294.0",
     "@aws-sdk/s3-request-presigner": "^3.289.0",
     "aws-sdk": "^2.1333.0",
     "csv-parse": "^5.3.6",

@@ -9,6 +9,5 @@ jspm_packages
 .esbuild
 
 .webpackCache
+.env
 environment.json
-
-.webpackCache

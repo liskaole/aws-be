@@ -3,6 +3,7 @@ import importProductsFile from '@functions/importProductsFile';
 import type { AWS } from '@serverless/typescript';
 
 const BUCKET = 'pillow-import-service'
+const REGION = 'eu-west-1'
 
 const serverlessConfiguration: AWS = {
   service: BUCKET,
@@ -11,10 +12,15 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: 'aws',
     runtime: 'nodejs16.x',
-    region: 'eu-west-1',
+    region: REGION,
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
+    },
+    environment: {
+      REGION: REGION,
+      BUCKET: BUCKET,
+      SQS_URL: 'https://sqs.eu-west-1.amazonaws.com/606485506214/catalogItemsQueue' //'SQSQueue'
     },
     iam: {
       role: {
@@ -32,7 +38,14 @@ const serverlessConfiguration: AWS = {
               "s3:*"
             ],
             Resource: `arn:aws:s3:::${BUCKET}/*`,
-          }
+          },
+          {
+            Effect: 'Allow',
+            Action: [
+              'sqs:*'
+            ],
+            Resource: 'arn:aws:sqs:eu-west-1:606485506214:catalogItemsQueue'
+          },
         ]
       }
     }

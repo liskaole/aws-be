@@ -1,6 +1,7 @@
+import { faker } from "@faker-js/faker";
 import { DocumentClient } from "aws-sdk/clients/dynamodb";
-import { Pillow } from "src/model/Pillow";
-import { Stock } from "src/model/Stock";
+import { Pillow } from "../model/pillow";
+import { Stock } from "../model/Stock";
 
 interface PillowStock extends Pillow, Stock {}
 
@@ -26,7 +27,7 @@ export default class PillowServerice {
         )
         
         return stocksPillows as PillowStock[];
-    }
+    } 
 
     async getPillow(productId: string): Promise<any> {
         const pillow = this.docClient.get({
@@ -57,13 +58,40 @@ export default class PillowServerice {
         return pillowStock as PillowStock;
     }
 
-    async createPillow(pillow: Pillow): Promise<Pillow> {
-        await this.docClient.put({
-            TableName: process.env.PRODUCTS_TABLE_NAME,
-            Item: pillow
-        }).promise()
+    async createPillow(pillow: Pillow) {
+        try {
+            const id = faker.datatype.uuid();
+            const { count, ...product } = pillow
 
-        return pillow as Pillow;
+            this.docClient.transactWrite({
+                TransactItems: [
+                  {
+                    Put: {
+                      TableName: process.env.PRODUCTS_TABLE_NAME,
+                      Item: {...product, ...{id: id}},
+                    },
+                  },
+                  {
+                    Put: {
+                      TableName: process.env.STOCKS_TABLE_NAME,
+                      Item: { count, product_id: id },
+                    },
+                  },
+                ],
+            }, (err, data) => {
+                if (err) {
+                  console.log(err)
+                  throw new Error("Error creating pillow", err)
+                } else {
+                  console.log(data);
+                  return pillow as Pillow
+                }
+            })
+
+        } catch(e) {
+            console.log('createPillow error ', e)
+            throw new Error("Error creating pillow", e)
+        }
     }
 
     async deletePillow(productId: string): Promise<any> {

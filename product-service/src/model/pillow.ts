@@ -1,5 +1,5 @@
 export interface Pillow {
-    id: string
+    id?: string
     title: string
     description?: string
     matherials: string
@@ -7,4 +7,5 @@ export interface Pillow {
     height: number
     width: number
     price: number
+    count: number
 }

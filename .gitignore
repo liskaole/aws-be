@@ -1,6 +1,5 @@
 # package directories
-import-servise/node_modules/*
-product-servise/node_modules/*
+node_modules
 jspm_packages
 
 # Serverless directories
@@ -11,3 +10,4 @@ jspm_packages
 
 .webpackCache
 .env
+environment.json
